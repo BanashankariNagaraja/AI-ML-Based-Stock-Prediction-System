@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5 mb-5">
+
+    <div class="card shadow-lg border-0 p-5">
+
+        <!-- TITLE -->
+
+        <h1 class="fw-bold mb-5 text-center">
+
+            Realtime Stock Price
+
+        </h1>
+
+        <!-- FORM -->
+
+        <form method="POST">
+
+            <div class="row g-3">
+
+                <div class="col-md-10">
+
+                    <input type="text"
+                    name="ticker"
+                    class="form-control form-control-lg"
+                    placeholder="Enter Stock Ticker (AAPL, TSLA, INFY.NS)"
+                    required>
+
+                </div>
+
+                <div class="col-md-2">
+
+                    <button type="submit"
+                    class="btn btn-dark w-100 h-100">
+
+                        Check
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+        <!-- RESULT -->
+
+        {% if price_usd %}
+
+        <div class="realtime-result mt-5 shadow-lg p-5 text-center rounded">
+
+            <!-- STOCK NAME -->
+
+            <h2 class="fw-bold mb-4">
+
+                {{ ticker }} Realtime Price
+
+            </h2>
+
+            <!-- USD PRICE -->
+
+            <h1 style="
+            color:#16a34a;
+            font-size:65px;
+            font-weight:800;
+            ">
+
+                $ {{ price_usd }}
+
+            </h1>
+
+            <!-- INR PRICE -->
+
+            <h2 style="
+            color:#2563eb;
+            font-size:40px;
+            font-weight:700;
+            margin-top:20px;
+            ">
+
+                ₹ {{ price_inr }}
+
+            </h2>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+{% endblock %}

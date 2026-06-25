@@ -1,0 +1,100 @@
+<!-- templates/profile.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-6">
+
+            <div class="card shadow border-0">
+
+                <div class="card-body p-5">
+
+                    <!-- PROFILE IMAGE -->
+
+                    <div class="text-center mb-4">
+
+                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                        class="rounded-circle shadow"
+                        width="120">
+
+                        <h2 class="mt-3 fw-bold">
+                            My Profile
+                        </h2>
+
+                    </div>
+
+                    <!-- PROFILE FORM -->
+
+                    <form method="POST">
+
+                        <div class="mb-4">
+
+                            <label class="form-label fw-bold">
+                                Username
+                            </label>
+
+                            <input type="text"
+                            name="username"
+                            value="{{ user.username }}"
+                            class="form-control form-control-lg"
+                            required>
+
+                        </div>
+
+                        <div class="mb-4">
+
+                            <label class="form-label fw-bold">
+                                Email Address
+                            </label>
+
+                            <input type="email"
+                            name="email"
+                            value="{{ user.email }}"
+                            class="form-control form-control-lg"
+                            required>
+
+                        </div>
+
+                        <!-- BUTTONS -->
+
+                        <div class="d-grid gap-3">
+
+                            <button type="submit"
+                            class="btn btn-primary btn-lg">
+
+                                <i class="fa-solid fa-floppy-disk"></i>
+
+                                Update Profile
+
+                            </button>
+
+                            <a href="/delete_profile"
+                            class="btn btn-danger btn-lg"
+                            onclick="return confirm('Are you sure to delete profile?')">
+
+                                <i class="fa-solid fa-trash"></i>
+
+                                Delete Profile
+
+                            </a>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

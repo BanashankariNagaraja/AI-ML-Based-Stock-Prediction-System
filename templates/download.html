@@ -1,0 +1,165 @@
+<!-- templates/download.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="card shadow border-0 p-4">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-8">
+
+                <h1 class="fw-bold">
+                    📥 Download Stock Tickers
+                </h1>
+
+                <p class="text-muted mt-3">
+
+                    Download the list of popular stock market ticker
+                    symbols in CSV format for analysis and prediction.
+
+                </p>
+
+                <ul class="list-group mt-4">
+
+                    <li class="list-group-item">
+                        ✔ Apple - AAPL
+                    </li>
+
+                    <li class="list-group-item">
+                        ✔ Tesla - TSLA
+                    </li>
+
+                    <li class="list-group-item">
+                        ✔ Google - GOOG
+                    </li>
+
+                    <li class="list-group-item">
+                        ✔ Microsoft - MSFT
+                    </li>
+
+                    <li class="list-group-item">
+                        ✔ Amazon - AMZN
+                    </li>
+
+                </ul>
+
+                <a href="/download"
+                class="btn btn-primary btn-lg mt-4">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Download CSV
+
+                </a>
+
+            </div>
+
+            <div class="col-md-4 text-center">
+
+                <img src="https://cdn-icons-png.flaticon.com/512/3500/3500833.png"
+                class="img-fluid"
+                style="max-width:250px;">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- TABLE SECTION -->
+
+    <div class="card shadow border-0 mt-5">
+
+        <div class="card-body">
+
+            <h3 class="mb-4">
+                📊 Available Stock Tickers
+            </h3>
+
+            <div class="table-responsive">
+
+                <table class="table table-bordered table-hover">
+
+                    <thead class="table-dark">
+
+                        <tr>
+
+                            <th>Company</th>
+
+                            <th>Ticker Symbol</th>
+
+                            <th>Sector</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>Apple</td>
+
+                            <td>AAPL</td>
+
+                            <td>Technology</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Tesla</td>
+
+                            <td>TSLA</td>
+
+                            <td>Automobile</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Google</td>
+
+                            <td>GOOG</td>
+
+                            <td>Technology</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Microsoft</td>
+
+                            <td>MSFT</td>
+
+                            <td>Technology</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Amazon</td>
+
+                            <td>AMZN</td>
+
+                            <td>E-Commerce</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

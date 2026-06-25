@@ -1,0 +1,145 @@
+<!-- templates/index.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+
+<section class="hero-section">
+
+    <div class="container">
+
+        <div class="row align-items-center justify-content-center">
+
+            <!-- TEXT -->
+
+            <div class="col-lg-12 text-center">
+
+                <h1 class="display-3 fw-bold">
+
+                    Stock Market Prediction
+
+                </h1>
+
+                <p class="lead mt-4 w-75 mx-auto">
+
+                    Predict future stock prices using Machine Learning.
+                    Check live stock prices, analytics, and AI-based
+                    forecasting with a modern intelligent system.
+
+                </p>
+
+                <a href="/register"
+                class="btn btn-primary btn-lg mt-4 px-5 py-3">
+
+                    Get Started
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="container mt-5 mb-5">
+
+    <div class="row g-4">
+
+        <!-- LIVE STOCKS -->
+
+        <div class="col-md-4">
+
+            <div class="card shadow border-0 h-100 dashboard-card">
+
+                <div class="card-body text-center p-5">
+
+                    <i class="fa-solid fa-chart-line feature-icon"></i>
+
+                    <h3 class="mt-4 fw-bold">
+
+                        Live Stocks
+
+                    </h3>
+
+                    <p class="mt-3 text-muted">
+
+                        Get realtime stock prices instantly
+                        using live market data.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- AI PREDICTION -->
+
+        <div class="col-md-4">
+
+            <div class="card shadow border-0 h-100 dashboard-card">
+
+                <div class="card-body text-center p-5">
+
+                    <i class="fa-solid fa-brain feature-icon"></i>
+
+                    <h3 class="mt-4 fw-bold">
+
+                        AI Prediction
+
+                    </h3>
+
+                    <p class="mt-3 text-muted">
+
+                        Predict next 2 day stock prices
+                        using Machine Learning algorithms.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ANALYTICS -->
+
+        <div class="col-md-4">
+
+            <div class="card shadow border-0 h-100 dashboard-card">
+
+                <div class="card-body text-center p-5">
+
+                    <i class="fa-solid fa-chart-pie feature-icon"></i>
+
+                    <h3 class="mt-4 fw-bold">
+
+                        Analytics
+
+                    </h3>
+
+                    <p class="mt-3 text-muted">
+
+                        Visual dashboards, graphs and
+                        realtime market insights.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

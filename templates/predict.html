@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5 mb-5">
+
+    <div class="card shadow-lg border-0 p-5 prediction-main-card">
+
+        <!-- TITLE -->
+
+        <h1 class="text-center fw-bold mb-5 prediction-title">
+
+            Stock Price Prediction
+
+        </h1>
+
+        <!-- FORM -->
+
+        <form method="POST">
+
+            <div class="row g-3 align-items-center">
+
+                <div class="col-md-10">
+
+                    <input type="text"
+                    name="ticker"
+                    class="form-control form-control-lg predict-input"
+                    placeholder="Enter Stock Symbol (AAPL, TSLA, INFY.NS)"
+                    required>
+
+                </div>
+
+                <div class="col-md-2">
+
+                    <button type="submit"
+                    class="btn btn-primary btn-lg w-100 predict-btn">
+
+                        Predict
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+        <!-- RESULT -->
+
+        {% if prediction != None %}
+
+        <div class="mt-5">
+
+            <!-- RESULT CARD -->
+
+            <div class="prediction-result-card p-4">
+
+                <h2 class="text-center fw-bold mb-4 result-heading">
+
+                    Prediction Result
+
+                </h2>
+
+                <hr class="result-line">
+
+                <!-- STOCK NAME -->
+
+                <div class="text-center">
+
+                    <h3 class="fw-bold mb-4 stock-name">
+
+                        {{ ticker }}
+
+                    </h3>
+
+                </div>
+
+                <!-- PREDICTIONS -->
+
+                <div class="row g-4 mt-2">
+
+                    <!-- DAY 1 -->
+
+                    <div class="col-md-6">
+
+                        <div class="prediction-box text-center">
+
+                            <h4 class="fw-bold text-dark">
+
+                                Day 1 Prediction
+
+                            </h4>
+
+                            <!-- USD -->
+
+                            <h1 style="
+                            color:#16a34a !important;
+                            font-size:55px;
+                            font-weight:800;
+                            ">
+
+                                $ {{ prediction[0] }}
+
+                            </h1>
+
+                            <!-- INR -->
+
+                            <h3 style="
+                            color:#2563eb;
+                            font-weight:700;
+                            margin-top:10px;
+                            ">
+
+                                ₹ {{ prediction_inr[0] }}
+
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                    <!-- DAY 2 -->
+
+                    <div class="col-md-6">
+
+                        <div class="prediction-box text-center">
+
+                            <h4 class="fw-bold text-dark">
+
+                                Day 2 Prediction
+
+                            </h4>
+
+                            <!-- USD -->
+
+                            <h1 style="
+                            color:#16a34a !important;
+                            font-size:55px;
+                            font-weight:800;
+                            ">
+
+                                $ {{ prediction[1] }}
+
+                            </h1>
+
+                            <!-- INR -->
+
+                            <h3 style="
+                            color:#2563eb;
+                            font-weight:700;
+                            margin-top:10px;
+                            ">
+
+                                ₹ {{ prediction_inr[1] }}
+
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- CHART -->
+
+            <div class="card shadow border-0 mt-5 p-4 chart-card">
+
+                <h3 class="text-center fw-bold mb-4 chart-title">
+
+                    Stock Analysis Graph
+
+                </h3>
+
+                <div class="text-center">
+
+                    <img src="/{{ chart }}"
+                    class="img-fluid rounded shadow chart-image">
+
+                </div>
+
+                <!-- DOWNLOAD BUTTON -->
+
+                <div class="text-center mt-4">
+
+                    <a href="/{{ csv_path }}"
+                    download
+                    class="btn btn-success btn-lg">
+
+                        Download Stock Dataset
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+{% endblock %}
