@@ -1,0 +1,268 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5 mb-5">
+
+    <!-- TITLE -->
+
+    <div class="d-flex align-items-center mb-5">
+
+        <h1 class="fw-bold">
+
+            Admin Dashboard
+
+        </h1>
+
+    </div>
+
+    <!-- TOP ANALYTICS -->
+
+    <div class="row g-4">
+
+        <!-- USERS -->
+
+        <div class="col-lg-3 col-md-6">
+
+            <div class="card shadow-sm border-0 admin-card text-center p-4 h-100">
+
+                <div class="mb-3">
+
+                    <i class="fa-solid fa-users fa-3x text-primary"></i>
+
+                </div>
+
+                <h2 class="fw-bold">
+
+                    {{ total_users }}
+
+                </h2>
+
+                <p class="text-muted mb-0">
+
+                    Total Users
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- PREDICTIONS -->
+
+        <div class="col-lg-3 col-md-6">
+
+            <div class="card shadow-sm border-0 admin-card text-center p-4 h-100">
+
+                <div class="mb-3">
+
+                    <i class="fa-solid fa-chart-line fa-3x text-success"></i>
+
+                </div>
+
+                <h2 class="fw-bold">
+
+                    120+
+
+                </h2>
+
+                <p class="text-muted mb-0">
+
+                    Predictions
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- ACCURACY -->
+
+        <div class="col-lg-3 col-md-6">
+
+            <div class="card shadow-sm border-0 admin-card text-center p-4 h-100">
+
+                <div class="mb-3">
+
+                    <i class="fa-solid fa-bullseye fa-3x text-danger"></i>
+
+                </div>
+
+                <h2 class="fw-bold">
+
+                    95%
+
+                </h2>
+
+                <p class="text-muted mb-0">
+
+                    Accuracy
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- TOP STOCK -->
+
+        <div class="col-lg-3 col-md-6">
+
+            <div class="card shadow-sm border-0 admin-card text-center p-4 h-100">
+
+                <div class="mb-3">
+
+                    <i class="fa-solid fa-arrow-trend-up fa-3x text-warning"></i>
+
+                </div>
+
+                <h2 class="fw-bold">
+
+                    AAPL
+
+                </h2>
+
+                <p class="text-muted mb-0">
+
+                    Top Stock
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- QUICK ACTIONS -->
+
+    <div class="mt-5">
+
+        <h3 class="fw-bold mb-4">
+
+            Quick Actions
+
+        </h3>
+
+       <div class="row g-4 justify-content-center">
+
+    <!-- CARD 1 -->
+
+    <div class="col-lg-3 col-md-6">
+
+        <div class="card admin-card p-4 text-center h-100">
+
+            <i class="fas fa-users fa-4x text-primary mb-4"></i>
+
+            <h2 class="fw-bold">
+                Manage Users
+            </h2>
+
+            <p>
+                View and manage registered users.
+            </p>
+
+            <a href="/admin/users"
+            class="btn btn-dark mt-3">
+
+                Open
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="col-lg-3 col-md-6">
+
+        <div class="card admin-card p-4 text-center h-100">
+
+            <i class="fas fa-chart-pie fa-4x text-warning mb-4"></i>
+
+            <h2 class="fw-bold">
+                Analytics
+            </h2>
+
+            <p>
+                Visual dashboards and reports.
+            </p>
+
+            <a href="/analytics"
+            class="btn btn-success mt-3">
+
+                Open
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+
+    <div class="col-lg-3 col-md-6">
+
+        <div class="card admin-card p-4 text-center h-100">
+
+            <i class="fas fa-chart-bar fa-4x text-warning mb-4"></i>
+
+            <h2 class="fw-bold">
+                Market Overview
+            </h2>
+
+            <p>
+                Check realtime stock market trends.
+            </p>
+
+            <a href="/realtime"
+            class="btn btn-warning mt-3">
+
+                Open
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- CARD 4 -->
+
+    <div class="col-lg-3 col-md-6">
+
+        <div class="card admin-card p-4 text-center h-100">
+
+            <i class="fas fa-envelope fa-4x text-info mb-4"></i>
+
+            <h2 class="fw-bold">
+                User Messages
+            </h2>
+
+            <p>
+                View contact messages sent by users.
+            </p>
+
+            <a href="/admin/messages"
+            class="btn btn-primary mt-3">
+
+                Open
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+            
+        </div>
+
+    </div>
+   
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,290 @@
+<!-- templates/admin/analytics.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <h1 class="mb-4 fw-bold">
+        Analytics Dashboard
+    </h1>
+
+    <!-- TOP CARDS -->
+
+    <div class="row g-4">
+
+        <div class="col-md-3">
+
+            <div class="card shadow border-0 analytics-card">
+
+                <div class="card-body text-center">
+
+                    <i class="fa-solid fa-users analytics-icon"></i>
+
+                    <h2 class="mt-3">
+                        {{ total_users }}
+                    </h2>
+
+                    <p>Total Users</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="card shadow border-0 analytics-card">
+
+                <div class="card-body text-center">
+
+                    <i class="fa-solid fa-chart-line analytics-icon"></i>
+
+                    <h2 class="mt-3">
+                        120
+                    </h2>
+
+                    <p>Total Predictions</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="card shadow border-0 analytics-card">
+
+                <div class="card-body text-center">
+
+                    <i class="fa-solid fa-bullseye analytics-icon"></i>
+
+                    <h2 class="mt-3">
+                        95%
+                    </h2>
+
+                    <p>Prediction Accuracy</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="card shadow border-0 analytics-card">
+
+                <div class="card-body text-center">
+
+                    <i class="fa-solid fa-arrow-trend-up analytics-icon"></i>
+
+                    <h2 class="mt-3">
+                        AAPL
+                    </h2>
+
+                    <p>Top Stock</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- TABLE -->
+
+    <div class="card shadow border-0 mt-5">
+
+        <div class="card-body">
+
+            <h4 class="mb-4">
+                Stock Prediction Report
+            </h4>
+
+            <div class="table-responsive">
+
+                <table class="table table-bordered table-hover">
+
+                    <thead class="table-dark">
+
+                        <tr>
+
+                            <th>Stock</th>
+
+                            <th>Current Price</th>
+
+                            <th>Predicted Price</th>
+
+                            <th>Accuracy</th>
+
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>AAPL</td>
+
+                            <td>$210</td>
+
+                            <td>$215</td>
+
+                            <td>95%</td>
+
+                            <td>
+                                <span class="badge bg-success">
+                                    Up
+                                </span>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>TSLA</td>
+
+                            <td>$180</td>
+
+                            <td>$175</td>
+
+                            <td>91%</td>
+
+                            <td>
+                                <span class="badge bg-danger">
+                                    Down
+                                </span>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>GOOG</td>
+
+                            <td>$160</td>
+
+                            <td>$170</td>
+
+                            <td>93%</td>
+
+                            <td>
+                                <span class="badge bg-success">
+                                    Up
+                                </span>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ANALYTICS SECTION -->
+
+    <div class="row mt-5 g-4">
+
+        <div class="col-md-6">
+
+            <div class="card shadow border-0">
+
+                <div class="card-body">
+
+                    <h4 class="mb-3">
+                        System Analytics
+                    </h4>
+
+                    <ul class="list-group">
+
+                        <li class="list-group-item">
+                            Daily Active Users : 50
+                        </li>
+
+                        <li class="list-group-item">
+                            Total Searches : 340
+                        </li>
+
+                        <li class="list-group-item">
+                            Most Searched Stock : AAPL
+                        </li>
+
+                        <li class="list-group-item">
+                            Total Reports Downloaded : 25
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-6">
+
+            <div class="card shadow border-0">
+
+                <div class="card-body text-center">
+
+                    <h4 class="mb-4">
+                        Prediction Accuracy
+                    </h4>
+
+                    <div class="progress mb-3" style="height:30px;">
+
+                        <div class="progress-bar bg-success"
+                        style="width:95%;">
+
+                            95%
+
+                        </div>
+
+                    </div>
+
+                    <div class="progress mb-3" style="height:30px;">
+
+                        <div class="progress-bar bg-primary"
+                        style="width:91%;">
+
+                            91%
+
+                        </div>
+
+                    </div>
+
+                    <div class="progress" style="height:30px;">
+
+                        <div class="progress-bar bg-warning"
+                        style="width:93%;">
+
+                            93%
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
